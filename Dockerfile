@@ -1,11 +1,8 @@
-FROM node:argon
+FROM nodesource/node:4.0
 
-RUN mkdir -p /usr/src/apps/client
-WORKDIR /usr/src/apps/client
-
-COPY package.json /usr/src/apps/client
-RUN npm install
+ADD . /usr/src/apps/client/
+RUN npm install  
 
 EXPOSE 3000
 
-CMD [ "npm", "start" ]
+CMD ["node","client.js"]  
