@@ -27,8 +27,8 @@ function sayHelloToServer(res, path){
   var http = require('http');
 
   var options = {
-      host: 'localhost',
-      port: 9080,
+      host: '172.18.0.22',
+      port: 8080,
       path: path,
       headers: {
           'Content-Type': 'application/json'
