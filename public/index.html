@@ -44,6 +44,9 @@
 
                 rowHtml += '</tr>';
                 $('#responsesTable').append(rowHtml);
+
+                // Point out to last response
+                $('#responses').scrollTop($('#responses')[0].scrollHeight);
             }
         });
 
@@ -85,8 +88,7 @@
       </div>
       <div class="row" id="responses">
         <div class="col-md-10 col-md-offset-1">
-            <div class="table-responsive table-condensed table-stripped">
-              <table class="table" id="responsesTable">
+              <table class="table table-responsive" id="responsesTable">
                 <thead>
                   <tr>
                     <th>Id</th>
@@ -97,7 +99,6 @@
                 <tbody>
                 </tbody>
               </table>
-            </div>
         </div>
       </div>
       <div class="row" id="footer">
