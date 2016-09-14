@@ -1,8 +1,8 @@
-FROM nodesource/node:4.0
+FROM node:4-onbuild
 
-ADD . /usr/src/apps/client/
+ADD . /usr/src/app
 RUN npm install  
 
 EXPOSE 3000
 
-CMD ["node","client.js"]  
+CMD ["node","client.js"] 
